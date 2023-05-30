@@ -1,3 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~bootstrap/scss/bootstrap'
+@import 'bootstrap/scss/bootstrap';
+
+h2 {
+  color: #FCFF00;
+}
+
+p {
+  color: red;
+}
