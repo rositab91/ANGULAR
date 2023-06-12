@@ -10,6 +10,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Error404Component } from './components/error404/error404.component';
+import { DetailsComponent } from './components/details/details.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 const routes: Route[] = [
 {
@@ -18,7 +20,17 @@ const routes: Route[] = [
 },
 {
   path: 'profile',
-  component: ProfileComponent
+  component: ProfileComponent,
+  children: [
+    {
+      path: 'details',
+      component: DetailsComponent
+    },
+    {
+      path: 'favourites',
+      component: FavouritesComponent
+    }
+  ]
 },
 {
   path: 'login',
@@ -44,8 +56,10 @@ const routes: Route[] = [
     ProfileComponent,
     HomeComponent,
     NavbarComponent,
-    Error404Component
-  ],
+    Error404Component,
+    DetailsComponent,
+    FavouritesComponent,
+      ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)
