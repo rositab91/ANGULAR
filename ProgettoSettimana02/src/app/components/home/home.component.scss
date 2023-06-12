@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  height: 100vh;
+  background-image: url('../../../assets/netflix-and-popcorn-2zv6jrrymnbijwxo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-left: 0px;
+}
+
+.post-it {
+  width: 300px;
+  padding: 20px;
+  background-color: rgba(247, 203, 114, 0.8);
+  border: 2px solid rgb(17, 16, 14);
+  border-left: none;
+}
