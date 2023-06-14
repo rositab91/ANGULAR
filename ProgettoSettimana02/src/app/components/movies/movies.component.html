@@ -1,1 +1,22 @@
-<p>movies works!</p>
+<div class="text-center">
+  <h1>OUR MOVIES</h1>
+</div>
+<div class="text-center" *ngIf="!movies">
+  <span class="spinner-grow"></span>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6 h-100 rounded-5" *ngFor="let movie of movies">
+      <div class="card h-100">
+        <img src="{{imageURL}}{{movie.poster_path}}" class="card-img-top" alt="Locandina {{movie.title}}">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">
+            {{movie.overview}}
+          </p>
+          <button type="button" id="like" name="like">♥</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

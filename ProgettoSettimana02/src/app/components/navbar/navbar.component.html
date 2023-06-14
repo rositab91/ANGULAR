@@ -11,6 +11,14 @@
           <a class="nav-link active text-light" aria-current="page" [routerLink]="['/']" routerLinkActive="active"
             [routerLinkActiveOptions]="{exact: true}">Home</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-light" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" [routerLink]="['/users']" routerLinkActive="active">Users</a>
+        </li>
+
         <li class="dropdown">
           <a class="nav-link dropdown-toggle text-light" [routerLink]="['/profile']" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">

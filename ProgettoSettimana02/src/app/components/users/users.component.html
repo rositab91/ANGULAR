@@ -1,0 +1,13 @@
+<h1 class="text-center">Users List</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of users">
+          Nome: {{user.name}} <br>
+          Email: {{user.email}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

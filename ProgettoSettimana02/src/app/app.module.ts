@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Route } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -12,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { Error404Component } from './components/error404/error404.component';
 import { DetailsComponent } from './components/details/details.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
+import { UsersComponent } from './components/users/users.component';
 
 const routes: Route[] = [
 {
@@ -31,6 +33,14 @@ const routes: Route[] = [
       component: FavouritesComponent
     }
   ]
+},
+{
+  path: 'movies',
+  component: MoviesComponent
+},
+{
+  path: 'users',
+  component: UsersComponent
 },
 {
   path: 'login',
@@ -59,9 +69,11 @@ const routes: Route[] = [
     Error404Component,
     DetailsComponent,
     FavouritesComponent,
+    UsersComponent,
       ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
