@@ -15,4 +15,3 @@ export class MoviesService {
     return this.http.get<Movies[]>(`${this.baseUrl}movies-popular`);
   }
   }
-
