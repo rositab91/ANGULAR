@@ -18,7 +18,7 @@ users: Users[] = [];
       this.usersSrv.recupera().subscribe((_users: Users[]) =>{
         this.users = _users;
       });
-    }, 1000);
+    }, 100);
   }
 }
 

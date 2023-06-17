@@ -1,0 +1,8 @@
+.navbar {
+  background: rgb(255, 0, 0);
+  background: linear-gradient(70deg, rgb(255, 0, 0) 0%, rgb(121, 9, 11) 35%, rgb(0, 0, 0) 100%);
+}
+
+#signOut_btn {
+  background-color: #79090b;
+}/*# sourceMappingURL=navbar.component.css.map */

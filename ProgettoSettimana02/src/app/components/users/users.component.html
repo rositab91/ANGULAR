@@ -1,13 +1,18 @@
-<h1 class="text-center">Users List</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <ul class="list-group">
-        <li class="list-group-item" *ngFor="let user of users">
-          Nome: {{user.name}} <br>
-          Email: {{user.email}}
-        </li>
-      </ul>
-    </div>
+<div class="d-flex justify-content-center table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
   </div>
-</div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Route } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -14,15 +15,29 @@ import { Error404Component } from './components/error404/error404.component';
 import { DetailsComponent } from './components/details/details.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { UsersComponent } from './components/users/users.component';
+import { AuthGuard } from './auth/auth.guard';
+
 
 const routes: Route[] = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+},
 {
-  path: '',
-  component: HomeComponent
+  path: 'home',
+  component: HomeComponent,
+  children: [
+      {
+          path: 'login',
+          component: LoginComponent
+      }
+  ]
 },
 {
   path: 'profile',
   component: ProfileComponent,
+  canActivate: [AuthGuard],
   children: [
     {
       path: 'details',
@@ -36,11 +51,13 @@ const routes: Route[] = [
 },
 {
   path: 'movies',
-  component: MoviesComponent
+  component: MoviesComponent,
+  canActivate: [AuthGuard]
 },
 {
   path: 'users',
-  component: UsersComponent
+  component: UsersComponent,
+  canActivate: [AuthGuard]
 },
 {
   path: 'login',
@@ -74,7 +91,8 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    FormsModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

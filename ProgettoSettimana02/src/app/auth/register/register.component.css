@@ -46,13 +46,14 @@
 }
 
 .signup a {
-  color: rgba(243, 244, 246, 1);
+  color: rgb(243, 244, 246);
   text-decoration: none;
   font-size: 14px;
 }
 
 .signup a:hover {
-  text-decoration: underline #79090B;
+  -webkit-text-decoration: underline #79090B;
+          text-decoration: underline #79090B;
 }
 
 .sign {
@@ -80,9 +81,9 @@
   align-items: center;
   height: 100vh;
   padding-left: 0px;
- }
+}
 
- .form-container {
+.form-container {
   max-width: 400px;
   margin: 0 auto;
-}
+}/*# sourceMappingURL=register.component.css.map */

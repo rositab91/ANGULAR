@@ -1,0 +1,11 @@
+.container-fluid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-left: 0px;
+  background-image: url("../../../assets/netflix-and-popcorn-2zv6jrrymnbijwxo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=home.component.css.map */
