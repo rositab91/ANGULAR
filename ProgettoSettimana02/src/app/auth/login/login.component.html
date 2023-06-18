@@ -1,12 +1,12 @@
 <div class="container-fluid bg-black d-flex align-items-center">
   <div class="form-container mx-auto">
     <p class="title">Welcome Back!</p>
-    <form #form="ngForm" (ngSubmit)="(form)">
+    <form #form="ngForm" (ngSubmit)="signIn(form)">
       <div class="input-group">
         <label for="email">E-Mail</label>
-        <input type="email" id="email" class="form-control" ngModel name="email" required email  >
+        <input type="email" id="email" class="form-control" name="email" required ngModel>
         <label for="password">Password</label>
-        <input type="password" id="password"  class="form-control" required ngModel name="password" required password minlength="4" >
+        <input type="password" id="password"  class="form-control"  name="password" required ngModel>
       </div><br>
       <button type="submit" [routerLink]="['/home/login']" [disabled]="form.invalid" class="sign">Sign In</button>
     </form>

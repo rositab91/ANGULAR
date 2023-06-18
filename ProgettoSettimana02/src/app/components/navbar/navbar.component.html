@@ -12,10 +12,10 @@
             [routerLinkActiveOptions]="{exact: true}">Home</a>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="user">
           <a class="nav-link text-light" [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="user">
           <a class="nav-link text-light" [routerLink]="['/users']" routerLinkActive="active">Users</a>
         </li>
 
@@ -30,17 +30,17 @@
             <li><a class="dropdown-item" [routerLink]="['/profile/favourites']">Favourites</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/login']" routerLinkActive="">Sign In</a>
+        <li class="nav-item" *ngIf="!user">
+          <a class="nav-link text-light" [routerLink]="['/login']" routerLinkActive="active">Sign In</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" [routerLink]="['/register']" routerLinkActive="">Sign Up</a>
+        <li class="nav-item" *ngIf="!user">
+          <a class="nav-link text-light" [routerLink]="['/register']" routerLinkActive="active">Sign Up</a>
         </li>
       </ul>
 
       <div>
         <button type="button" id="logout" name="logout"
-          class="btn btn-danger border-black text-light" id="signOut_btn"> Sign Out</button>
+          class="btn btn-danger border-black text-light" id="signOut_btn" *ngIf="user" (click)="logout()"> Sign Out</button>
       </div>
     </div>
   </div>

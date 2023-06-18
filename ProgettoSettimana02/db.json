@@ -6,6 +6,20 @@
       "name": "Rosita",
       "lastName": "Bongiovanni",
       "id": 1
+    },
+    {
+      "email": "nadia@nadia.it",
+      "password": "$2a$10$llWiufMnK7MH4CJfgpKrSebBQA/hOtbjzE9mMSJGWiOzg0Q5xH3dS",
+      "name": "nadia",
+      "lastName": "nadia",
+      "id": 2
+    },
+    {
+      "email": "mart@mart.it",
+      "password": "$2a$10$HV5NmpDVR0rY1DG0hdsgzeVlCvD8Ytmz/qZZmPWHl5t7rRg6jTu2K",
+      "name": "mart",
+      "lastName": "mart",
+      "id": 3
     }
   ],
   "favorites": [

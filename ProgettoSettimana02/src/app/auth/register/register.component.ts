@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
 
     ngOnInit(): void { }
 
-    async register(form: NgForm) {
+    register(form: NgForm) {
         this.isLoading = true;
         console.log(form.value);
         try {
