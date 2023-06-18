@@ -24,8 +24,12 @@ export class RegisterComponent implements OnInit {
             this.router.navigate(['/login']);
             this.isLoading = false;
         }
-        catch (error) {
+        catch (error: any) {
             console.error(error);
+            if (error.status === 400) {
+                alert('Email già registrata!');
+                this.router.navigate(['/register']);
+            }
             this.isLoading = false
         }
     }

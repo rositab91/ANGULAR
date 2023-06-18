@@ -16,6 +16,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { DetailsComponent } from './components/details/details.component';
 import { FavouritesComponent } from './components/favourites/favourites.component';
 import { UsersComponent } from './components/users/users.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Route[] = [
@@ -52,6 +53,7 @@ const routes: Route[] = [
 {
   path: 'movies',
   component: MoviesComponent,
+  canActivate: [AuthGuard]
 
 },
 {
