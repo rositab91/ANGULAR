@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-6 h-100 rounded-5 my-3" *ngFor="let movie of movies">
       <div class="card h-100">
-        <img src="{{imageURL}}{{movie.poster_path}}" class="card-img-top" alt="Locandina {{movie.title}}">
+        <img src="{{movie.poster_path}}" class="card-img-top" alt="Locandina {{movie.title}}">
         <div class="card-body bg-black">
           <h5 class="card-title text-light">{{movie.title}}</h5>
           <p class="card-text text-truncate text-light ">
