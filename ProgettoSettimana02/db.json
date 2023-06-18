@@ -20,20 +20,6 @@
       "name": "mart",
       "lastName": "mart",
       "id": 3
-    },
-    {
-      "email": "joe@black.it",
-      "password": "$2a$10$5AaEk8Lit1XzMQbkrSByjOs51E1uQuXReGEeTJ4j6Gu1nUUUPNF0e",
-      "name": "Joe",
-      "lastName": "Black",
-      "id": 4
-    },
-    {
-      "email": "jadin@jadin.it",
-      "password": "$2a$10$w5irCOkM0l79QNk3HSH8jOM/ANcsNTzdKrWVhLBHMLgXOaafsik6y",
-      "name": "jadin",
-      "lastName": "jadin",
-      "id": 5
     }
   ],
   "favorites": [
