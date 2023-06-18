@@ -4,13 +4,29 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+    selector: 'app-register',
+    templateUrl: './register.component.html',
+    styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private authSrv: AuthService, private router: Router) { }
+    isLoading: boolean = false;
 
-  ngOnInit(): void {}
+    constructor(private authSrv: AuthService, private router: Router) { }
+
+    ngOnInit(): void { }
+
+    async register(form: NgForm) {
+        this.isLoading = true;
+        console.log(form.value);
+        try {
+            this.authSrv.signup(form.value).subscribe();
+            this.router.navigate(['/login']);
+            this.isLoading = false;
+        }
+        catch (error) {
+            console.error(error);
+            this.isLoading = false
+        }
+    }
 }

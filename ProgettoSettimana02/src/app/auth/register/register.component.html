@@ -1,26 +1,23 @@
 <div class="container-fluid bg-black d-flex align-items-center">
-  <div class="form-container mx-auto">
-    <p class="title">Welcome!</p>
-  <form #form="ngForm" (ngSubmit)="(form)">
-      <div class="input-group">
-          <label for="name">Name</label>
-          <input name="name" class="form-control" id="name" type="text" required ngModel>
-          <label for="lastName">Last Name</label>
-          <input name="lastName" required ngModel class="form-control" id="lastName" type="text">
-      </div>
-      <div class="input-group">
-          <label for="email">E-Mail</label>
-          <input type="email" name="email" id="email" class="form-control" required ngModel>
-      </div>
-      <div class="input-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" class="form-control" required ngModel>
-      </div>
-      <div class="input-group">
-        <label for="phone number">Phone Number</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" >
+    <div class="form-container mx-auto">
+        <p class="title">Welcome!</p>
+        <form #form="ngForm" (ngSubmit)="register(form)">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input name="name" class="form-control" id="name" type="text" required ngModel>
+                <label for="lastName">Last Name</label>
+                <input name="lastName" class="form-control" id="lastName" type="text" required ngModel>
+            </div>
+            <div class="input-group">
+                <label for="email">E-Mail</label>
+                <input type="email" name="email" id="email" class="form-control" required ngModel>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required ngModel>
+            </div>
+            <br>
+            <button type="submit" [disabled]="form.invalid" class="sign">Sign Up</button>
+            <span *ngIf="isLoading" class="spinner-border spinner-border-sm" role="status"></span>
+        </form>
     </div>
-      <br>
-      <button type="submit" [disabled]="form.invalid" class="sign">Sign Up</button>
-       </form>
-</div>
